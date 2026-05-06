@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+  {% block content %}
+      
+    <table class="table">
+      <div class="container mt-2 text-left"></div>
+        <h2 class=text-success>Lista de Productos</h2>
+    </div>
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Código</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Cantidad Inventario</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Unidad de Medida</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>001</td>
+            <td>Pan tajado bolsa 200 grs</td>
+            <td>100</td>
+            <td>5000</td>
+            <td>Unidad</td>
+            <td>Alimentos</td>
+            <td>
+              <button type="button" class="btn btn-success">Editar</button>
+              <button type="button" class="btn btn-danger">Borrar</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>002</td>
+            <td>Carne cerdo costilla</td>
+            <td>10000</td>
+            <td>32</td>
+            <td>GRS</td>
+            <td>Alimentos</td>                     
+            <td>
+              <button type="button" class="btn btn-success">Editar</button>
+              <button type="button" class="btn btn-danger">Borrar</button>
+            </td>
+          </tr> 
+
+        </tbody>
+      </table>
+    </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+  {% block content %}
+    <div class="container mt-4">
+      <div class="container mt-2 text-left">
+        <h2 class=text-success>Nueva Factura</h2>
+  </div>
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                Datos de la Factura
+            </div>
+            <div class="card-body">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="id_factura">Número de Factura</label>
+                        <input type="text" class="form-control" id="id_factura" placeholder="FAC-001" readonly value="FAC-20260001">
+                        <small class="form-text text-muted">Se genera automáticamente</small>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" class="form-control" id="fecha" value="2026-04-29">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="id_cliente">Cliente</label>
+                        <select id="id_cliente" class="form-control">
+                            <option value="">Seleccione un cliente...</option>
+                            <option value="1">Juan Alvarez - CC 1012011012</option>
+                            <option value="2">Jacob Hernandez - CC 79587918</option>
+                            <option value="3">Benjamin Flores - CC 90765716</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="id_usuario">Vendedor</label>
+                        <select id="id_usuario" class="form-control">
+                            <option value="">Seleccione vendedor...</option>
+                            <option value="1">Juan Alvarez García (Vendedor)</option>
+                            <option value="2">Jacob Hernandez Martínez (Vendedor)</option>
+                            <option value="3">Benjamin Flores Hernández (Vendedor)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                Detalle de Productos
+            </div>
+            <div class="card-body">
+                <!-- Fila para agregar nuevo producto -->
+                <div class="form-row mb-3">
+                    <div class="col-md-5">
+                        <label>Producto</label>
+                        <select class="form-control" id="nuevo_producto">
+                            <option value="">Seleccione producto...</option>
+                            <option value="1" data-precio="5000">Pan tajado - $5.000</option>
+                            <option value="2" data-precio="8000">Carne cerdo - $8.000</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label>Cantidad</label>
+                        <input type="number" class="form-control" id="nueva_cantidad" value="1" min="1">
+                    </div>
+                    <div class="col-md-2">
+                        <label>Precio Unitario.</label>
+                        <input type="text" class="form-control" id="nuevo_precio" readonly placeholder="Automático">
+                    </div>
+                    <div class="col-md-2">
+                        <label>&nbsp;</label>
+                        <button class="btn btn-primary btn-block" id="btn_agregar">➕ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Tabla de productos agregados (detalle_factura) -->
+                <table class="table table-bordered" id="tabla_detalle">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>#</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Subtotal</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="detalle_body">
+                        
+                        <tr>
+                            <td colspan="6" class="text-center">No hay productos agregados</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                Totales
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 offset-md-8">
+                        <table class="table table-bordered">
+                            <tr>
+                                <td><strong>Subtotal:</strong></td>
+                                <td class="text-right" id="subtotal_txt">$0</td>
+                            </tr>
+                            <tr>
+                                <td><strong>IVA (19%):</strong></td>
+                                <td class="text-right" id="iva_txt">$0</td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td><strong>TOTAL:</strong></td>
+                                <td class="text-right" id="total_txt"><strong>$0</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success btn-lg btn-block" id="btn_guardar_factura">
+                    💾 Guardar Factura
+                </button>
+            </div>
+        </div>
+    </div>
+  </form>  
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+  {% block content %}
+
+<table class="table table-striped">
+      <div class="container mt-2 text-left">
+    <h2 class=text-success>Lista de Usuarios</h2>
+  </div>
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre Completo</th>
+      <th scope="col">Usuario</th>
+      <th scope="col">Cedula Ciudadania</th>
+      <th scope="col">Contraseña</th>
+      <th scope="col">Rol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Juan Alvarez García</td>
+      <td>39836</td>
+      <td>1012011012</td>
+      <td>Conejo123</td>
+      <td>Vendedor</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob Hernandez Martínez</td>
+      <td>38967</td>
+      <td>79587918</td>
+      <td>876543987</td>
+      <td>Vendedor</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Benjamin Flores Hernández</td>
+      <td>38978</td>
+      <td>90765716</td>
+      <td>Benjuanis867</td>
+      <td>Vendedor</td>
+    </tr>
+  </tbody>
+</table> 
+</body>
+</html>
+
+{% endblock %}

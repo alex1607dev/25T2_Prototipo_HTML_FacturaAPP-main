@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+  {% block content %}
+<table class="table table-striped">
+  <div class="container mt-2 text-left"></div>
+        <h2 class=text-success>Lista de Clientes</h2>
+    </div>
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre Completo</th>
+      <th scope="col">Fecha de Nacimiento</th>
+      <th scope="col">Cedula Ciudadania</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Direccion</th>  
+      <th scope="col">Ciudad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Juan Alvarez</td>
+      <td>18/05/1995</td>
+      <td>1012011012</td>
+      <td>3103314022</td>
+      <td>Cra 1 No.3-07</td>
+      <td>Bogotá</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob Hernandez</td>
+      <td>24/05/1997</td>
+      <td>79587918</td>
+      <td>3103354087</td>
+      <td>Tranv 5 No.8-17</td>
+      <td>Cali</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Benjamin Flores</td>
+      <td>12/10/1998</td>
+      <td>90765716</td>
+      <td>3223324087</td>
+      <td>Calle 8 No.3-12</td>
+      <td>Cartagena</td>
+    </tr>
+  </tbody>
+</table>  
+</body>
+</html>
+
+{% endblock %}
